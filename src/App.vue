@@ -1,26 +1,22 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <p>Hey!</p>
+  <newGreeting :age="age"/>
+  <newUser :age="age" @age-change="age++"/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import newGreeting from "./components/Greeting.vue";
+import newUser from './components/User.vue';
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    newGreeting,
+    newUser
+  },
+  data() {
+    return {
+      age: 20
+    }
   }
-}
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
