@@ -19,8 +19,8 @@ export default {
     }
   },
   methods: {
-    updateAge(num) {
-     this.age += num
+    updateAge: function (num) {
+      this.age += num
     }
   }
 
